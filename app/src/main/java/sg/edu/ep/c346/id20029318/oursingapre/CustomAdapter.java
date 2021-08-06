@@ -39,7 +39,6 @@ public class CustomAdapter extends ArrayAdapter {
         TextView txtName = rowView.findViewById(R.id.txtName);
         TextView txtDescription = rowView.findViewById(R.id.txtDes);
         TextView txtSQKM = rowView.findViewById(R.id.txtSQKM);
-        TextView txtStars = rowView.findViewById(R.id.txtStars);
         RatingBar rateStars = rowView.findViewById(R.id.ratingBar);
 
 
@@ -49,35 +48,27 @@ public class CustomAdapter extends ArrayAdapter {
 
         String stars = "";
         if (currIsland.getStars() == 5){
-            stars = "* * * * *";
             rateStars.setRating(5);
         }
         else if (currIsland.getStars() == 4){
-            stars = "* * * *";
             rateStars.setRating(4);
         }
         else if (currIsland.getStars() == 3){
-            stars = "* * *";
             rateStars.setRating(3);
         }
         else if (currIsland.getStars() == 2){
-            stars = "* *";
             rateStars.setRating(2);
         }
         else if (currIsland.getStars() == 1){
-            stars = "*";
             rateStars.setRating(1);
         }
         else {
-            stars = "";
             rateStars.setRating(0);
         }
         // Set values to the TextView to display the corresponding information
         txtName.setText(currIsland.getName());
         txtDescription.setText(currIsland.getDescription());
         txtSQKM.setText(currIsland.getAreaKM2() + "");
-        txtStars.setText(stars);
-        txtStars.setTypeface(null, Typeface.BOLD); // tried to bold stars
 
         return rowView;
     }

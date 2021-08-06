@@ -13,8 +13,16 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
-        android:textColor="#288786"
+        android:textColor="@color/mahRed"
         android:layout_marginBottom="5dp"/>
+
+
+    <TextView
+        android:id="@+id/txtDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#288786"
+        android:text="TextView" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,29 +37,15 @@
             android:layout_marginBottom="5dp"
             android:layout_marginRight="5dp"/>
 
-        <TextView
-            android:id="@+id/txtStars"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/mahRed"
-            android:text="TextView"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"/>
 
         <RatingBar
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:isIndicator="false"/>
+            android:isIndicator="false" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtDes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/teal_200"
-        android:text="TextView" />
 
 
 </LinearLayout>
